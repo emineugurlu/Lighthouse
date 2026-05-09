@@ -1,5 +1,6 @@
 #Utility functionsimport redis
 import json
+import redis
 
 # 'host' normalde localhost olur ama Docker kullanınca servis adını yazacağız.
 r = redis.Redis(host='localhost', port=6373, db=0)
