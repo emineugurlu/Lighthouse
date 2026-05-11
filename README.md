@@ -34,10 +34,21 @@ To spin up the entire infrastructure:
 ```bash
 docker-compose up --build
 ````
-<img src="https://github.com/user-attachments/assets/6b248d5e-9e0c-4c3f-9a4b-eadc8fcd3d7a" width="300" height="300" style="object-fit:cover;">  
-<img src="https://github.com/user-attachments/assets/da4bf2cf-5ab8-4183-9f74-3579822c1e8b" width="300" height="300" style="object-fit:cover;">  
-<img src="https://github.com/user-attachments/assets/280e47e9-8585-438c-8be0-95703f3da911" width="300" height="300" style="object-fit:cover;"> 
+### 1. API Request (Swagger UI)
+The entry point where logs are received and validated.
+<img src="https://github.com/user-attachments/assets/6b248d5e-9e0c-4c3f-9a4b-eadc8fcd3d7a" width="100%" style="border-radius:10px; border: 1px solid #ddd;">
 
+---
+
+### 2. Message Queue (Redis Storage)
+Logs successfully queued in Redis, verified via `redis-cli`.
+<img src="https://github.com/user-attachments/assets/da4bf2cf-5ab8-4183-9f74-3579822c1e8b" width="100%" style="border-radius:10px; border: 1px solid #ddd;">
+
+---
+
+### 3. Worker Processing (Consumer)
+Standalone worker service pulling logs from Redis and processing them.
+<img src="https://github.com/user-attachments/assets/280e47e9-8585-438c-8be0-95703f3da911" width="100%" style="border-radius:10px; border: 1px solid #ddd;">
 Access API Docs: http://localhost:8000/docs
 
 ##Running the Worker Locally
