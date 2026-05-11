@@ -36,8 +36,7 @@ docker-compose up --build
 ````
 | API Request (Swagger) | Message Queue (Redis) | Worker Processing |
 | :---: | :---: | :---: |
-<img width="1790" height="867" alt="image" src="https://github.com/user-attachments/assets/6b248d5e-9e0c-4c3f-9a4b-eadc8fcd3d7a" />
-<img width="343" height="234" alt="image" src="https://github.com/user-attachments/assets/280e47e9-8585-438c-8be0-95703f3da911" />
+| <img src="https://github.com/user-attachments/assets/6b248d5e-9e0c-4c3f-9a4b-eadc8fcd3d7a" width="300" height="300" style="object-fit:cover;"> | <img src="RESIM_LINKI_BURAYA" width="300" height="300" style="object-fit:cover;"> | <img src="https://github.com/user-attachments/assets/280e47e9-8585-438c-8be0-95703f3da911" width="300" height="300" style="object-fit:cover;"> |
 
 
 Access API Docs: http://localhost:8000/docs
