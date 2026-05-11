@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # 1. Redis Servisi: Bizim ambarımız
+  redis:
+    image: "redis:alpine" # Çok hafif bir Linux versiyonu üzerine kurulu Redis
+    ports:
+      - "6379:6379" # (Bilgisayarındaki Port) : (Konteyner İçindeki Port)
+
+  # 2. API Servisi: Senin yazdığın FastAPI kodu
+  api:
+    build: . # Bulunduğun dizindeki Dockerfile'ı kullan
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis # Önce Redis çalışsın, sonra API başlasın
+    environment:
+      - REDIS_HOST=redis # API artık Redis'e "localhost" yerine "redis" ismiyle ulaşacak
